@@ -6,12 +6,6 @@ import React from "react";
 
 export const revalidate = 0;
 
-interface SearchProps {
-  searchParams: {
-    title: string;
-  };
-}
-
 const Liked = async () => {
   const songs = await getLikedSongs();
   return (
