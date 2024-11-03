@@ -7,6 +7,7 @@ import { UserProvider } from "@/Providers/UserProvider";
 import { ModalProvider } from "@/Providers/ModalProvider";
 import { ToasterProvider } from "@/Providers/ToasterProvider";
 import { getSongsByUserID } from "@/Actions/getSongsByUserID";
+import { Player } from "@/Components/Player";
 
 export const metadata: Metadata = {
   title: "EchoBeat",
@@ -32,6 +33,7 @@ export default async function RootLayout({
           <UserProvider>
             <ModalProvider />
             <Sidebar songs={userSongs}>{children}</Sidebar>
+            <Player />
           </UserProvider>
         </SupabaseProvider>
       </body>

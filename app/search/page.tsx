@@ -1,10 +1,10 @@
-"use server";
-
 import { getSongsByTitle } from "@/Actions/getSongsByTitle";
 import { Header } from "@/Components/Header";
 import { SearchContent } from "@/Components/SearchContent";
 import { SearchInput } from "@/Components/SearchInput";
 import React from "react";
+
+export const revalidate = 0;
 
 interface SearchProps {
   searchParams: {
@@ -13,7 +13,8 @@ interface SearchProps {
 }
 
 const Search = async ({ searchParams }: SearchProps) => {
-  const songs = await getSongsByTitle(searchParams.title);
+  const { title } = await searchParams;
+  const songs = await getSongsByTitle(title);
 
   return (
     <div className="bg-neutral-900 rounded-lg h-full w-full overflow-hidden overflow-y-auto ">
