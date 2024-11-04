@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import useAuthModal from "@/Hooks/useAuthModal";
-import { useUser } from "@/Hooks/useUser";
+import useAuthModal from "@/hooks/useAuthModal";
+import { useUser } from "@/hooks/useUser";
 import { useSessionContext } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";

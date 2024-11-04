@@ -9,10 +9,10 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import uniqid from "uniqid";
 
-import useUploadModal from "@/Hooks/useUploadModal";
+import useUploadModal from "@/hooks/useUploadModal";
 import { Input } from "./Input";
 import { Button } from "./Button";
-import { useUser } from "@/Hooks/useUser";
+import { useUser } from "@/hooks/useUser";
 
 export const UploadModal = () => {
   const [isLoading, setIsLoading] = useState(false);

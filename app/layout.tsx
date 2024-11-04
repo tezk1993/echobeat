@@ -8,6 +8,7 @@ import { ModalProvider } from "@/Providers/ModalProvider";
 import { ToasterProvider } from "@/Providers/ToasterProvider";
 import { getSongsByUserID } from "@/Actions/getSongsByUserID";
 import { Player } from "@/Components/Player";
+import { getActiveProductsWithPrices } from "@/Actions/getActiveProductsWithPrices";
 
 export const metadata: Metadata = {
   title: "EchoBeat",
@@ -25,13 +26,14 @@ export default async function RootLayout({
 }>) {
   const userSongs = await getSongsByUserID();
 
+  const products = await getActiveProductsWithPrices();
   return (
     <html lang="en">
       <body className={font.className}>
         <ToasterProvider />
         <SupabaseProvider>
           <UserProvider>
-            <ModalProvider />
+            <ModalProvider products={products} />
             <Sidebar songs={userSongs}>{children}</Sidebar>
             <Player />
           </UserProvider>

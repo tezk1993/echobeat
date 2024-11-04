@@ -1,6 +1,6 @@
 "use client";
 import { PlayButton } from "@/Components/PlayButton";
-import { useLoadImage } from "@/Hooks/useLoadImage";
+import { useLoadImage } from "@/hooks/useLoadImage";
 import { Song } from "@/types";
 import Image from "next/image";
 import React from "react";

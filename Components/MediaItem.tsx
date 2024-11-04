@@ -1,6 +1,6 @@
 "use client";
 
-import { useLoadImage } from "@/Hooks/useLoadImage";
+import { useLoadImage } from "@/hooks/useLoadImage";
 import { Song } from "@/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";

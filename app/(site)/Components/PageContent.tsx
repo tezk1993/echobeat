@@ -3,7 +3,7 @@
 import { Song } from "@/types";
 import React from "react";
 import { SongCard } from "./SongCard";
-import useOnPlay from "@/Hooks/useOnPlay";
+import useOnPlay from "@/hooks/useOnPlay";
 
 interface PageContentProps {
   songs: Song[];

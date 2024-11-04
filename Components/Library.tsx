@@ -1,14 +1,14 @@
 "use client";
-import useAuthModal from "@/Hooks/useAuthModal";
-import useUploadModal from "@/Hooks/useUploadModal";
-import { useUser } from "@/Hooks/useUser";
+import useAuthModal from "@/hooks/useAuthModal";
+import useUploadModal from "@/hooks/useUploadModal";
+import { useUser } from "@/hooks/useUser";
 import { Song } from "@/types";
 import Image from "next/image";
 import React from "react";
 import { AiOutlinePlus } from "react-icons/ai";
 import { TbPlaylist } from "react-icons/tb";
 import { MediaItem } from "./MediaItem";
-import useOnPlay from "@/Hooks/useOnPlay";
+import useOnPlay from "@/hooks/useOnPlay";
 
 interface LibraryProps {
   songs: Song[];

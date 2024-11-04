@@ -1,8 +1,8 @@
 "use client";
 
-import useGetSongById from "@/Hooks/useGetSongById";
-import { useLoadSongUrl } from "@/Hooks/useLoadSongUrl";
-import usePlayer from "@/Hooks/usePlayer";
+import useGetSongById from "@/hooks/useGetSongById";
+import { useLoadSongUrl } from "@/hooks/useLoadSongUrl";
+import usePlayer from "@/hooks/usePlayer";
 import { Song } from "@/types";
 import React from "react";
 import { PlayerContent } from "./PlayerContent";

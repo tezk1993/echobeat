@@ -5,7 +5,7 @@ import { Song } from "@/types";
 import React from "react";
 import { MediaItem } from "./MediaItem";
 import { LikeButton } from "./LikeButton";
-import useOnPlay from "@/Hooks/useOnPlay";
+import useOnPlay from "@/hooks/useOnPlay";
 
 interface SearchContentProps {
   songs: Song[];

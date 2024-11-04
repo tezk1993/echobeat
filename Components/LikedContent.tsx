@@ -5,8 +5,8 @@ import React, { useEffect } from "react";
 import { MediaItem } from "./MediaItem";
 import { LikeButton } from "./LikeButton";
 import { useRouter } from "next/navigation";
-import { useUser } from "@/Hooks/useUser";
-import useOnPlay from "@/Hooks/useOnPlay";
+import { useUser } from "@/hooks/useUser";
+import useOnPlay from "@/hooks/useOnPlay";
 
 interface LikedContentProps {
   songs: Song[];
