@@ -1,14 +1,12 @@
-import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
-import { headers, cookies } from "next/headers";
+import { createClient } from "@/server";
 import { NextResponse } from "next/server";
 import { stripe } from "@/libs/stripe";
-import { getURL } from "@/libs/helpers";
+import { getUrl } from "@/libs/helpers";
 import { createOrRetrieveCustomer } from "@/libs/supabaseAdmin";
 
 async function POST() {
-  const supabase = createRouteHandlerClient({
-    cookies,
-  });
+  const supabase = await createClient();
+
   try {
     const {
       data: { user },
@@ -25,7 +23,7 @@ async function POST() {
 
     const { url } = await stripe.billingPortal.sessions.create({
       customer,
-      return_url: `${getURL}/`,
+      return_url: `${getUrl}/`,
     });
 
     return NextResponse.json({ url });

@@ -1,6 +1,4 @@
-import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
-
-import { headers, cookies } from "next/headers";
+import { createClient } from "@/server";
 
 import { NextResponse } from "next/server";
 
@@ -12,13 +10,13 @@ export async function POST(request: Request) {
   const { price, quantity = 1, metadata = {} } = await request.json();
 
   try {
-    const supabase = createRouteHandlerClient({
-      cookies,
-    });
+    const supabase = await createClient();
+
     const {
       data: { user },
     } = await supabase.auth.getUser();
 
+    console.log("user id", user?.id);
     const customer = await createOrRetrieveCustomer({
       uuid: user?.id || "",
       email: user?.email || "",
