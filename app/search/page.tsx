@@ -7,9 +7,7 @@ import React from "react";
 export const revalidate = 0;
 
 interface SearchProps {
-  searchParams: {
-    title: string;
-  };
+  searchParams: Promise<{ title: string }>;
 }
 
 const Search = async ({ searchParams }: SearchProps) => {
