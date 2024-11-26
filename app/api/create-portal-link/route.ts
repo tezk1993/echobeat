@@ -1,7 +1,7 @@
 import { createClient } from "@/server";
 import { NextResponse } from "next/server";
 import { stripe } from "@/libs/stripe";
-import { getUrl } from "@/libs/helpers";
+import { getURL } from "@/libs/helpers";
 import { createOrRetrieveCustomer } from "@/libs/supabaseAdmin";
 
 async function POST() {
@@ -23,7 +23,7 @@ async function POST() {
 
     const { url } = await stripe.billingPortal.sessions.create({
       customer,
-      return_url: `${getUrl}/`,
+      return_url: `${getURL}/`,
     });
 
     return NextResponse.json({ url });
