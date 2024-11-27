@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EchoBeat 🎵
 
-## Getting Started
+**EchoBeat** is a Spotify-inspired music streaming platform built using modern web technologies. It allows users to browse, search, and play their favorite tracks while offering a sleek and responsive user interface. Powered by **Next.js**, **React**, **Supabase**, and **PostgreSQL**, EchoBeat demonstrates efficient full-stack development and database integration.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Music Streaming**: Browse, search, and play music from an extensive library of tracks.
+- **User Authentication**: Secure user login and signup using Supabase's authentication system.
+- **Playlists**: Create, save, and manage custom playlists.
+- **Favorites**: Mark songs as favorites for quick access.
+- **Responsive Design**: Fully optimized for desktop and mobile devices.
+- **Real-Time Updates**: Data is synced with a PostgreSQL database via Supabase for a seamless experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: Server-side rendering and static site generation for high performance.
+- **React**: A robust JavaScript library for building dynamic user interfaces.
+- **Supabase**: Backend-as-a-Service for authentication, real-time database, and storage.
+- **PostgreSQL**: A powerful, open-source relational database for storing application data.
+- **Tailwind CSS**: Utility-first CSS framework for rapid and responsive UI design.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+The project is organized as follows:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Echobeat**/
+├── actions/ # Reusable React components
+├── app/ # Contains the core application logic, including Next.js pages, routes.
+├── libs/ # Includes reusable utility functions, helper modules, or custom hooks used throughout the app.
+├── providers/ # Manages context and state providers for global app functionality, such as authentication or theme management.
+├── components/ # Reusable React components
+├── utils/ # Helper functions and services
+├── public/ # Static assets (images, icons, etc.)
+├── .env.local # Environment variables (e.g., Supabase keys)
+├── package.json # Project dependencies and scripts
