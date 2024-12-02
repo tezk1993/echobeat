@@ -29,6 +29,8 @@ export default async function RootLayout({
   const products = await getActiveProductsWithPrices();
   return (
     <html lang="en">
+      <link rel="icon" href="/EchoBeat_Logo.png" sizes="any" />
+
       <body className={font.className}>
         <ToasterProvider />
         <SupabaseProvider>
